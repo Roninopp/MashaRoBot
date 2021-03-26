@@ -302,7 +302,7 @@ def help_button(update, context):
                 )
                 + HELPABLE[module].__help__
             )
-            query.message.send_text(
+            query.message.reply_text(
                 text=text,
                 parse_mode=ParseMode.MARKDOWN,
                 disable_web_page_preview=True,
@@ -313,7 +313,7 @@ def help_button(update, context):
 
         elif prev_match:
             curr_page = int(prev_match.group(1))
-            query.message.edit_text(
+            query.message.reply_text(
                 text=HELP_STRINGS,
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(
@@ -323,7 +323,7 @@ def help_button(update, context):
 
         elif next_match:
             next_page = int(next_match.group(1))
-            query.message.edit_text(
+            query.message.reply_text(
                 text=HELP_STRINGS,
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(
@@ -332,7 +332,7 @@ def help_button(update, context):
             )
 
         elif back_match:
-            query.message.edit_text(
+            query.message.reply_text(
                 text=HELP_STRINGS,
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(
