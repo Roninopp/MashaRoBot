@@ -81,7 +81,12 @@ PM_START_TEXT = """
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕️ ADD Killua TO YOUR GROUP ➕️", url="t.me/Killua_Xbot?startgroup=true"),
+            text="➕️ ADD MASHA TO YOUR GROUP ➕️", url="t.me/Killua_Xbot?startgroup=true"),
+    ],
+    [
+        InlineKeyboardButton(text="🚨ADMINS", callback_data="adminmenu_"),
+        InlineKeyboardButton(text="👒USERS", callback_data="usermenu_"),
+        InlineKeyboardButton(text="🛡DEVS", callback_data="devmenu_"),
     ],
     [
         InlineKeyboardButton(text="ℹ️ ABOUT", callback_data="masha_"),
@@ -91,7 +96,7 @@ buttons = [
         InlineKeyboardButton(
             text="💾 SOURCE", callback_data="source_"),
         InlineKeyboardButton(
-            text="👥 SUPPORT", url="😅"
+            text="👥 SUPPORT", url="https://t.me/wastebots"
         ),
     ],
 ]
