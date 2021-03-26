@@ -74,19 +74,14 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-`Hellow` [🤗](https://telegra.ph/file/6937614341f42020a2ebc.jpg) `My name is` *Masha*
+`Hellow` [🤗](https://telegra.ph/file/91b872c2127ffaf244571.jpg) `My name is` *Killua Zolydck*
 `I'm here to help you manage your groups! Hit` *📚Commands* `button below to find out more about how to use me to my full potential.` 
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕️ ADD MASHA TO YOUR GROUP ➕️", url="t.me/MashaRoBot?startgroup=true"),
-    ],
-    [
-        InlineKeyboardButton(text="🚨ADMINS", callback_data="adminmenu_"),
-        InlineKeyboardButton(text="👒USERS", callback_data="usermenu_"),
-        InlineKeyboardButton(text="🛡DEVS", callback_data="devmenu_"),
+            text="➕️ ADD Killua TO YOUR GROUP ➕️", url="t.me/Killua_Xbot?startgroup=true"),
     ],
     [
         InlineKeyboardButton(text="ℹ️ ABOUT", callback_data="masha_"),
@@ -96,18 +91,18 @@ buttons = [
         InlineKeyboardButton(
             text="💾 SOURCE", callback_data="source_"),
         InlineKeyboardButton(
-            text="👥 SUPPORT", url="https://t.me/wastebots"
+            text="👥 SUPPORT", url="😅"
         ),
     ],
 ]
 
 
 HELP_STRINGS = """
-`Hi.. I'm` [MASHA🙋‍♀️](https://telegra.ph/file/6937614341f42020a2ebc.jpg)
+`Hi.. I'm` [Killua](https://telegra.ph/file/91b872c2127ffaf244571.jpg)
 `Click on the buttons below to get documentation about specific modules..`"""
 
 
-MASHA_IMG = "https://telegra.ph/file/6937614341f42020a2ebc.jpg"
+KILLUA_IMG = "https://telegra.ph/file/91b872c2127ffaf244571.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
  You can support the project via [Paypal](ko-fi.com/sawada) or by contacting @Sawada \
@@ -214,7 +209,8 @@ def start(update: Update, context: CallbackContext):
                 IMPORTED["rules"].send_rules(update, args[0], from_pm=True)
 
         else:
-            update.effective_message.reply_text(
+            update.effective_message.reply_photo(
+                KILLUA_IMG,
                 PM_START_TEXT,
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
@@ -306,7 +302,7 @@ def help_button(update, context):
                 )
                 + HELPABLE[module].__help__
             )
-            query.message.edit_text(
+            query.message.reply_text(
                 text=text,
                 parse_mode=ParseMode.MARKDOWN,
                 disable_web_page_preview=True,
@@ -356,7 +352,7 @@ def help_button(update, context):
 def Masha_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "masha_":
-        query.message.edit_text(
+        query.message.reply_text(
             text=""" ℹ️ I'm *MASHA*, a powerful group management bot built to help you manage your group easily.
                  \n❍ I can restrict users.
                  \n❍ I can greet users with customizable welcome messages and even set a group's rules.
@@ -391,7 +387,7 @@ def Masha_about_callback(update: Update, context: CallbackContext):
 def Admin_about_callback(update, context):
     query = update.callback_query
     if query.data == "adminmenu_":
-        query.message.edit_text(
+        query.message.reply_text(
             text=f"ADMIN MODULES",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
