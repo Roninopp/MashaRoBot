@@ -92,7 +92,6 @@ buttons = [
             text="💾 SOURCE", callback_data="source_"),
         InlineKeyboardButton(
             text="👥 SUPPORT", callback_data="adminmenu_")
-        ),
     ],
 ]
 
