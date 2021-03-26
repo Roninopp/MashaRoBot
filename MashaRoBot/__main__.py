@@ -81,7 +81,7 @@ PM_START_TEXT = """
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕️ ADD MASHA TO YOUR GROUP ➕️", url="t.me/Killua_Xbot?startgroup=true"),
+            text="➕️ ADD KILLUA TO YOUR GROUP ➕️", url="t.me/Killua_Xbot?startgroup=true"),
     ],
     [
         InlineKeyboardButton(text="ℹ️ ABOUT", callback_data="masha_"),
@@ -302,7 +302,7 @@ def help_button(update, context):
                 )
                 + HELPABLE[module].__help__
             )
-            query.message.edit_text(
+            query.message.send_text(
                 text=text,
                 parse_mode=ParseMode.MARKDOWN,
                 disable_web_page_preview=True,
