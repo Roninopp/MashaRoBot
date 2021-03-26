@@ -302,7 +302,7 @@ def help_button(update, context):
                 )
                 + HELPABLE[module].__help__
             )
-            query.message.reply_text(
+            query.message.edit_text(
                 text=text,
                 parse_mode=ParseMode.MARKDOWN,
                 disable_web_page_preview=True,
