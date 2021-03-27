@@ -352,7 +352,7 @@ def help_button(update, context):
 def Masha_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if "close_" in query.data:
-         await update.message.delete()
+        query.message.delete()
     if query.data == "masha_":
         query.message.reply_text(
             text=""" ℹ️ I'm *KILLUA*, a powerful group management bot built to help you manage your group easily.
