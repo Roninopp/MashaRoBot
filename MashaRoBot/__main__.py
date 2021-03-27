@@ -209,7 +209,7 @@ def start(update: Update, context: CallbackContext):
                 IMPORTED["rules"].send_rules(update, args[0], from_pm=True)
 
         else:
-            update.effective_message.reply_gif(
+            update.effective_message.reply_animation(
                 KILLUA_GIF,
                 PM_START_TEXT,
                 reply_markup=InlineKeyboardMarkup(buttons),
