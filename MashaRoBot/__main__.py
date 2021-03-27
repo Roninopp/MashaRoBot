@@ -372,7 +372,7 @@ def Masha_about_callback(update: Update, context: CallbackContext):
             ),
         )
     elif query.data == "masha_back":
-        query.message.delete
+        query.message.delete()
                 
 
 
