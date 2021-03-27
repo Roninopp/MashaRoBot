@@ -372,13 +372,8 @@ def Masha_about_callback(update: Update, context: CallbackContext):
             ),
         )
     elif query.data == "masha_back":
-        query.message.edit_text(
-                PM_START_TEXT,
-                reply_markup=InlineKeyboardMarkup(buttons),
-                parse_mode=ParseMode.MARKDOWN,
-                timeout=60,
-                disable_web_page_preview=False,
-        )
+        query.message.delete
+                
 
 
 @run_async
