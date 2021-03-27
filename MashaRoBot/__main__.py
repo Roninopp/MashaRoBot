@@ -369,10 +369,7 @@ def Masha_about_callback(update: Update, context: CallbackContext):
                 [
                  [
                     InlineKeyboardButton(text="Back", callback_data="masha_back")
-                 ],
-                 [
-                    InlineKeyboardButton(text="Close", callback_data="close_")
-                 ]
+                 ]     
                 ]
             ),
         )
