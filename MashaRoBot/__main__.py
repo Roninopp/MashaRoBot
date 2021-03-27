@@ -101,7 +101,7 @@ HELP_STRINGS = """
 `Click on the buttons below to get documentation about specific modules..`"""
 
 
-KILLUA_GIF = "https://telegra.ph/file/82770362f4a10948e62e5.mp4"
+KILLUA_GIF = "https://telegra.ph/file/91b872c2127ffaf244571.jpg"
 KILLUA2_IMG = "https://telegra.ph/file/f720e8258baaa7aa043eb.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
@@ -209,7 +209,7 @@ def start(update: Update, context: CallbackContext):
                 IMPORTED["rules"].send_rules(update, args[0], from_pm=True)
 
         else:
-            update.effective_message.reply_animation(
+            update.effective_message.reply_photo(
                 KILLUA_GIF,
                 PM_START_TEXT,
                 reply_markup=InlineKeyboardMarkup(buttons),
