@@ -351,6 +351,8 @@ def help_button(update, context):
 @run_async
 def Masha_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
+    if "close_" in query.data:
+         await update.message.delete()
     if query.data == "masha_":
         query.message.reply_text(
             text=""" ℹ️ I'm *KILLUA*, a powerful group management bot built to help you manage your group easily.
@@ -379,6 +381,7 @@ def Masha_about_callback(update: Update, context: CallbackContext):
                 timeout=60,
                 disable_web_page_preview=False,
         )
+
 
 
 @run_async
