@@ -74,14 +74,14 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-`Hellow` [🤗](https://telegra.ph/file/f720e8258baaa7aa043eb.jpg) `My name is` *Killua Zolydck*
+`Hellow` [🤗](https://https://te.legra.ph/file/9012a958e07362727ae19.jpg.jpg) `My name is` *Killua Zolydck*
 `I'm here to help you manage your groups! Hit` *📚Commands* `button below to find out more about how to use me to my full potential.` 
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕️ ADD KILLUA TO YOUR GROUP ➕️", url="t.me/Killua_Xbot?startgroup=true"),
+            text="➕️ ADD KILLUA TO YOUR GROUP ➕️", url="https://t.me/RONIN_Fighters_Fd?startgroup=true"),
     ],
     [
         InlineKeyboardButton(text="ℹ️ ABOUT", callback_data="masha_"),
@@ -89,7 +89,7 @@ buttons = [
     ],
     [
         InlineKeyboardButton(
-            text="💾 SOURCE", callback_data="source_"),
+            
         InlineKeyboardButton(
             text="👥 SUPPORT", callback_data="adminmenu_")
     ],
