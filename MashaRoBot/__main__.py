@@ -92,9 +92,6 @@ buttons = [
             
         InlineKeyboardButton(
             text="👥 SUPPORT", callback_data="adminmenu_")
-    ],
-]
-
 
 HELP_STRINGS = """
 `Hi.. I'm` [Killua](https://telegra.ph/file/91b872c2127ffaf244571.jpg)
